@@ -1,0 +1,8 @@
+node_modules
+dist
+.git
+uploads
+agent-tools
+*.md
+.env*
+!.env.example

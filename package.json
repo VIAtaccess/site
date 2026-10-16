@@ -1,0 +1,31 @@
+{
+  "name": "t-access-devsecops",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Landing t-access — DevSecOps & QA Accessibility Infrastructure (VIA, NBR 17255, WCAG 2.2 AAA).",
+  "scripts": {
+    "dev": "vite --port=43147 --host=0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port=43147 --host=0.0.0.0",
+    "start": "node server.mjs",
+    "lint": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/node": "^22.18.8",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.3",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7"
+  }
+}

@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #EB4A4C;
+  --color-brand-red-hover: #D83A3C;
+  --color-code-emerald: #10B981;
+  --color-code-cyan: #38BDF8;
+  --color-code-amber: #FBBF24;
+  --color-dark-canvas: #0B0F17;
+  --color-dark-surface: #131A26;
+  --color-dark-card: #182132;
+  --color-dark-card-border: #25334A;
+  --color-dark-muted: #64748B;
+  --color-dark-text: #E2E8F0;
+  --color-dark-border: #1E293B;
+
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headline: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  body {
+    background-color: #0B0F17;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+.tech-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+}
+
+.scanline {
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.25));
+  background-size: 100% 4px;
+}
+
+/* Custom scrollbars for code terminals */
+.terminal-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.terminal-scroll::-webkit-scrollbar-track {
+  background: #0B0F17;
+}
+.terminal-scroll::-webkit-scrollbar-thumb {
+  background: #25334A;
+  border-radius: 3px;
+}
+.terminal-scroll::-webkit-scrollbar-thumb:hover {
+  background: #38BDF8;
+}
+
+.underline-links-mode a {
+  text-decoration: underline !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
