@@ -1,6 +1,6 @@
 # t-access — DevSecOps & QA Accessibility Infrastructure
 
-Landing da t-access: acessibilidade como código executável e quality gate no CI/CD. Validador VIA, conformidade ABNT NBR 17255 e WCAG 2.2 AAA.
+Landing executiva da t-access: blindagem jurídica contra TACs e passivos da LBI, validador VIA, laudos periciais SHA-256, ABNT NBR 17255 e WCAG 2.2.
 
 Repositório: [github.com/VIAtaccess/site](https://github.com/VIAtaccess/site)
 

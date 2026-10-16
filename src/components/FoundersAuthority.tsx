@@ -1,103 +1,94 @@
 export function FoundersAuthority() {
   return (
-    <section className="w-full py-20 bg-[#0D131F]" id="dna-autoridade">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="font-mono text-xs sm:text-sm text-[#EB4A4C] uppercase tracking-wider font-semibold">
-            Credibilidade de Engenharia de Missão Crítica
+    <section className="w-full py-24 bg-surface-container-low border-b border-dark-border" id="dna-autoridade">
+      <div className="max-w-[1600px] mx-auto px-margin">
+        <div className="text-center max-w-3xl mx-auto mb-space-xl">
+          <span className="font-code-inline text-code-inline text-brand-red uppercase tracking-wider font-semibold">
+            Autoridade &amp; Liderança Técnica
           </span>
-          <h2 className="font-headline text-2xl sm:text-3xl lg:text-4xl text-white mt-2 tracking-tight font-bold">
-            Fundada por quem construiu a disciplina de QA no Brasil
+          <h2 className="font-headline-xl text-headline-xl text-white mt-2 tracking-tight font-bold">
+            Liderada por quem construiu a engenharia de qualidade de software no Brasil
           </h2>
-          <p className="font-body text-base text-[#94A3B8] mt-4 leading-relaxed">
-            Nossas fundadoras lideraram a engenharia de qualidade de software, testes de resiliência e esteiras de
-            segurança nos maiores bancos, operadoras e órgãos governamentais por mais de duas décadas.
+          <p className="font-body-lg text-body-lg text-on-surface-variant mt-3">
+            A governança da t-access é sustentada por especialistas que lideraram testes de resiliência e esteiras
+            de auditoria nos maiores ecossistemas bancários, de telecomunicações e de governo do país.
           </p>
         </div>
-
-        {/* Profiles */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {/* Co-founder 1: CEO */}
-          <div className="bg-[#131A26] border border-[#25334A] p-6 sm:p-8 rounded-xl flex flex-col sm:flex-row gap-5 items-start hover:border-[#EB4A4C] transition-colors">
-            <div className="w-16 h-16 rounded-full bg-[#182132] border-2 border-[#EB4A4C] flex items-center justify-center text-white shrink-0 shadow-md">
-              <span className="material-symbols-outlined text-[32px] text-[#EB4A4C]">verified_user</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-space-lg mb-space-xl">
+          <article className="bg-dark-card border border-dark-border p-space-lg rounded-xl flex flex-col sm:flex-row gap-space-md items-start hover:border-brand-red transition-colors">
+            <div className="w-16 h-16 rounded-xl bg-dark-slate border-2 border-brand-red flex items-center justify-center text-white shrink-0">
+              <span aria-hidden="true" className="material-symbols-outlined text-[32px] text-brand-red">
+                badge
+              </span>
             </div>
-            <div className="flex flex-col gap-1.5">
-              <div className="flex flex-wrap items-center gap-2">
-                <h3 className="font-headline text-lg sm:text-xl text-white font-bold">CEO &amp; Co-Fundadora</h3>
-                <span className="px-2 py-0.5 rounded bg-[#EB4A4C]/15 text-[#EB4A4C] font-mono text-[11px] font-semibold border border-[#EB4A4C]/30">
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-2 flex-wrap">
+                <h3 className="font-headline-md text-headline-md text-white font-bold">CEO &amp; Co-Fundadora</h3>
+                <span className="px-2 py-0.5 rounded bg-brand-red/15 text-brand-red font-code-inline text-[11px] font-semibold border border-brand-red/30">
                   20+ Anos de Carreira
                 </span>
               </div>
-              <span className="font-mono text-xs text-[#10B981] font-semibold">
-                Especialista em Gestão de Qualidade de Software, Governança ESG &amp; Compliance Legal
+              <span className="font-label-md text-label-md text-tertiary font-semibold">
+                Gestão de Qualidade Corporativa, Blindagem Jurídica &amp; Governança ESG
               </span>
-              <p className="font-body text-sm text-[#94A3B8] mt-2 leading-relaxed">
-                Pioneira na implementação de centros de excelência em testes de software de alta escala para sistemas
-                financeiros e corporativos. Responsável pela estratégia de blindagem jurídica e alinhamento com a ABNT
-                NBR 17255.
+              <p className="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                Pioneira na condução de programas de auditoria e conformidade em instituições financeiras nacionais.
+                Responsável pela estratégia de mitigação de litígios e alinhamento com os novos dispositivos da ABNT
+                NBR 17255 e jurisprudência dos tribunais superiores.
               </p>
             </div>
-          </div>
-
-          {/* Co-founder 2: CTO */}
-          <div className="bg-[#131A26] border border-[#25334A] p-6 sm:p-8 rounded-xl flex flex-col sm:flex-row gap-5 items-start hover:border-[#38BDF8] transition-colors">
-            <div className="w-16 h-16 rounded-full bg-[#182132] border-2 border-[#38BDF8] flex items-center justify-center text-white shrink-0 shadow-md">
-              <span className="material-symbols-outlined text-[32px] text-[#38BDF8]">terminal</span>
+          </article>
+          <article className="bg-dark-card border border-dark-border p-space-lg rounded-xl flex flex-col sm:flex-row gap-space-md items-start hover:border-tertiary transition-colors">
+            <div className="w-16 h-16 rounded-xl bg-dark-slate border-2 border-tertiary flex items-center justify-center text-white shrink-0">
+              <span aria-hidden="true" className="material-symbols-outlined text-[32px] text-tertiary">
+                memory
+              </span>
             </div>
-            <div className="flex flex-col gap-1.5">
-              <div className="flex flex-wrap items-center gap-2">
-                <h3 className="font-headline text-lg sm:text-xl text-white font-bold">CTO &amp; Co-Fundadora</h3>
-                <span className="px-2 py-0.5 rounded bg-[#38BDF8]/15 text-[#38BDF8] font-mono text-[11px] font-semibold border border-[#38BDF8]/30">
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-2 flex-wrap">
+                <h3 className="font-headline-md text-headline-md text-white font-bold">CTO &amp; Co-Fundadora</h3>
+                <span className="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-code-inline text-[11px] font-semibold border border-tertiary/30">
                   20+ Anos de Carreira
                 </span>
               </div>
-              <span className="font-mono text-xs text-[#38BDF8] font-semibold">
-                Arquiteta Chefe de Testes de Software, IA Generativa &amp; Automação CI/CD
+              <span className="font-label-md text-label-md text-tertiary font-semibold">
+                Arquiteta do Validador VIA, DevSecOps &amp; Visão Computacional
               </span>
-              <p className="font-body text-sm text-[#94A3B8] mt-2 leading-relaxed">
-                Criadora da arquitetura do motor VIA e dos algoritmos do Sentinela Inclusivo. Mais de 20 anos
-                desenvolvendo frameworks de automação de testes, performance crítica em grande volume e DevSecOps.
+              <p className="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                Mais de duas décadas chefiando engenharia de testes em sistemas de alta criticidade e transações de
+                grande volume. Idealizadora do motor automatizado VIA e dos algoritmos de Edge AI do Sentinela
+                Inclusivo para ambientes físicos.
               </p>
             </div>
-          </div>
+          </article>
         </div>
-
-        {/* Big Numbers Metrics */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-[#131A26] border border-[#25334A] p-6 rounded-xl text-center">
-            <span className="font-headline text-4xl sm:text-5xl text-[#EB4A4C] font-extrabold tracking-tight">
-              20+
-            </span>
-            <div className="font-mono text-xs text-white mt-1.5 font-semibold">Anos Liderando QA</div>
-            <p className="text-xs text-[#94A3B8] mt-1">Nos maiores ecossistemas críticos do país</p>
-          </div>
-
-          <div className="bg-[#131A26] border border-[#25334A] p-6 rounded-xl text-center">
-            <span className="font-headline text-4xl sm:text-5xl text-[#10B981] font-extrabold tracking-tight">
-              100%
-            </span>
-            <div className="font-mono text-xs text-white mt-1.5 font-semibold">Blindagem Legal</div>
-            <p className="text-xs text-[#94A3B8] mt-1">Conformidade ABNT NBR 17255 e WCAG 2.2</p>
-          </div>
-
-          <div className="bg-[#131A26] border border-[#25334A] p-6 rounded-xl text-center">
-            <span className="font-headline text-4xl sm:text-5xl text-[#38BDF8] font-extrabold tracking-tight">
-              0%
-            </span>
-            <div className="font-mono text-xs text-white mt-1.5 font-semibold">Scripts Invasivos</div>
-            <p className="text-xs text-[#94A3B8] mt-1">Acessibilidade nativa sem widgets externos</p>
-          </div>
-
-          <div className="bg-[#131A26] border border-[#25334A] p-6 rounded-xl text-center">
-            <span className="font-headline text-4xl sm:text-5xl text-white font-extrabold tracking-tight">
-              10k+
-            </span>
-            <div className="font-mono text-xs text-white mt-1.5 font-semibold">Componentes Auditados</div>
-            <p className="text-xs text-[#94A3B8] mt-1">Em esteiras de CI/CD de missão crítica</p>
-          </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-space-md">
+          <Stat value="20+" valueClass="text-brand-red" title="Anos de Experiência" hint="Na vanguarda do QA no Brasil" />
+          <Stat value="100%" valueClass="text-tertiary" title="Fé Técnica Pericial" hint="Laudos assinados digitalmente" />
+          <Stat value="0%" valueClass="text-white" title="Overlays Paliativos" hint="Código limpo e acessível nativo" />
+          <Stat value="10k+" valueClass="text-brand-red" title="Componentes Auditados" hint="Em esteiras de grandes bancos" />
         </div>
       </div>
     </section>
+  );
+}
+
+function Stat({
+  value,
+  valueClass,
+  title,
+  hint,
+}: {
+  value: string;
+  valueClass: string;
+  title: string;
+  hint: string;
+}) {
+  return (
+    <div className="bg-dark-card border border-dark-border p-5 rounded-lg text-center">
+      <span className={`font-display text-display font-bold ${valueClass}`}>{value}</span>
+      <span className="block font-label-md text-white font-semibold mt-1">{title}</span>
+      <span className="font-body-sm text-[12px] text-on-surface-variant">{hint}</span>
+    </div>
   );
 }

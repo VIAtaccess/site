@@ -1,23 +1,92 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-red: #EB4A4C;
-  --color-brand-red-hover: #D83A3C;
-  --color-code-emerald: #10B981;
-  --color-code-cyan: #38BDF8;
-  --color-code-amber: #FBBF24;
-  --color-dark-canvas: #0B0F17;
-  --color-dark-surface: #131A26;
-  --color-dark-card: #182132;
-  --color-dark-card-border: #25334A;
-  --color-dark-muted: #64748B;
-  --color-dark-text: #E2E8F0;
-  --color-dark-border: #1E293B;
+  --color-brand-red: #eb4a4c;
+  --color-brand-red-hover: #d83a3c;
+  --color-dark-slate: #242f42;
+  --color-dark-bg: #0f141c;
+  --color-dark-card: #18202c;
+  --color-dark-border: #334155;
+  --color-tertiary: #4edea3;
+  --color-outline: #64748b;
+  --color-surface: #0f141c;
+  --color-surface-container: #18202c;
+  --color-surface-container-high: #242f42;
+  --color-surface-container-low: #111722;
+  --color-surface-container-lowest: #0a0d14;
+  --color-on-surface: #f8fafc;
+  --color-on-surface-variant: #94a3b8;
+
+  --spacing-gutter-sm: 1rem;
+  --spacing-margin: 2rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-margin-sm: 1rem;
+  --spacing-space-lg: 1.5rem;
 
   --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-headline: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --font-headline-md: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headline-lg: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headline-xl: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headline-lg-mobile: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headline-xl-mobile: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-md: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-sm: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-lg: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label-md: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label-sm: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-code-inline: "JetBrains Mono", ui-monospace, monospace;
+
+  --text-headline-md: 1.25rem;
+  --text-headline-md--line-height: 1.75rem;
+  --text-headline-md--letter-spacing: -0.01em;
+  --text-headline-md--font-weight: 600;
+
+  --text-body-md: 0.875rem;
+  --text-body-md--line-height: 1.5rem;
+
+  --text-display: 3.5rem;
+  --text-display--line-height: 4rem;
+  --text-display--letter-spacing: -0.025em;
+  --text-display--font-weight: 700;
+
+  --text-body-sm: 0.75rem;
+  --text-body-sm--line-height: 1.125rem;
+  --text-body-sm--letter-spacing: 0.01em;
+
+  --text-headline-lg-mobile: 1.5rem;
+  --text-headline-lg-mobile--line-height: 2rem;
+
+  --text-code-inline: 0.8125rem;
+  --text-code-inline--line-height: 1.125rem;
+  --text-code-inline--font-weight: 500;
+
+  --text-label-md: 0.875rem;
+  --text-label-md--line-height: 1.25rem;
+  --text-label-md--letter-spacing: 0.005em;
+  --text-label-md--font-weight: 600;
+
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.75rem;
+
+  --text-label-sm: 0.75rem;
+  --text-label-sm--line-height: 1rem;
+  --text-label-sm--letter-spacing: 0.02em;
+  --text-label-sm--font-weight: 600;
+
+  --text-headline-xl-mobile: 2rem;
+  --text-headline-xl-mobile--line-height: 2.5rem;
+
+  --text-headline-lg: 1.875rem;
+  --text-headline-lg--line-height: 2.25rem;
+
+  --text-headline-xl: 2.5rem;
+  --text-headline-xl--line-height: 3rem;
+  --text-headline-xl--letter-spacing: -0.02em;
+  --text-headline-xl--font-weight: 700;
 }
 
 @layer base {
@@ -26,55 +95,9 @@
     color-scheme: dark;
   }
   body {
-    background-color: #0B0F17;
-    color: #E2E8F0;
+    background-color: #0f141c;
+    color: #f8fafc;
     font-family: "Inter", sans-serif;
+    overscroll-behavior: none;
   }
-}
-
-.tech-grid-pattern {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
-}
-
-.scanline {
-  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.25));
-  background-size: 100% 4px;
-}
-
-/* Custom scrollbars for code terminals */
-.terminal-scroll::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-.terminal-scroll::-webkit-scrollbar-track {
-  background: #0B0F17;
-}
-.terminal-scroll::-webkit-scrollbar-thumb {
-  background: #25334A;
-  border-radius: 3px;
-}
-.terminal-scroll::-webkit-scrollbar-thumb:hover {
-  background: #38BDF8;
-}
-
-.underline-links-mode a {
-  text-decoration: underline !important;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
