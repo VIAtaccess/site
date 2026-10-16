@@ -2,6 +2,10 @@
 
 Landing da t-access: acessibilidade como código executável e quality gate no CI/CD. Validador VIA, conformidade ABNT NBR 17255 e WCAG 2.2 AAA.
 
+Repositório: [github.com/VIAtaccess/site](https://github.com/VIAtaccess/site)
+
+O GitHub Pages publica em [viataccess.github.io/site](https://viataccess.github.io/site/) a cada push em `main`.
+
 ## Rodar localmente
 
 Pré-requisito: Node.js 20+.
