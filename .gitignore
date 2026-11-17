@@ -4,6 +4,7 @@ coverage/
 .DS_Store
 *.log
 .env*
+contato.config.php
 !.env.example
 .railway/
 uploads/

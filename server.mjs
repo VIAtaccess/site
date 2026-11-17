@@ -14,6 +14,8 @@ const mime = {
   '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
   '.map': 'application/json; charset=utf-8',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
   '.txt': 'text/plain; charset=utf-8',
@@ -42,7 +44,11 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) {
+  if (fs.existsSync(file) && fs.statSync(file).isDirectory()) {
+    file = path.join(file, 'index.html');
+  }
+
+  if (!fs.existsSync(file)) {
     file = path.join(dist, 'index.html');
   }
 

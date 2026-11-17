@@ -1,30 +1,254 @@
 <!doctype html>
-<html class="dark" lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>t-access — Blindagem jurídica e laudo pericial de acessibilidade</title>
-    <meta
-      name="description"
-      content="Conformidade pericial contínua contra TACs e passivos da LBI. Validador VIA, laudos SHA-256, ABNT NBR 17255 e WCAG 2.2."
-    />
-    <meta property="og:title" content="t-access — Blindagem jurídica e laudo pericial de acessibilidade" />
-    <meta
-      property="og:description"
-      content="Conformidade pericial contínua contra TACs e passivos da LBI. Validador VIA, laudos SHA-256, ABNT NBR 17255 e WCAG 2.2."
-    />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bg-dark-bg font-body-md text-body-md text-on-surface antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>t-access — Acessibilidade com prova técnica</title>
+  <meta name="description" content="A t-access torna seu site e app acessíveis e entrega um laudo técnico assinado. Validador VIA, testes com pessoas com deficiência, WCAG 2.2 e ABNT NBR 17225.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root{--ch:#353F44;--dk:#232A2E;--red:#C8323A;--redb:#E8444B;--bg:#F5F6F7;--tx:#1E2427;--mu:#4A555B;--bd:#D5DADD}
+    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--tx);background:#fff;line-height:1.6;font-size:1.0625rem}
+    a{color:#9E1F27}:focus-visible{outline:3px solid #1A73E8;outline-offset:3px;border-radius:4px}
+    .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--ch);padding:.6rem 1rem;z-index:9}.skip:focus{left:1rem;top:1rem}
+    .w{max-width:1160px;margin:0 auto;padding:0 1.25rem}
+    header{background:var(--ch);color:#fff;position:sticky;top:0;z-index:5}header .w{display:flex;align-items:center;gap:1rem;min-height:72px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:800;font-size:1.25rem}
+    .brand img{height:46px;width:46px;border-radius:8px}
+    .brand .t{color:var(--redb)}
+    nav ul{display:flex;gap:1.2rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;font-weight:600}nav a:hover{text-decoration:underline}nav{margin-left:auto}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--red);color:#fff;font-weight:700;padding:.85rem 1.4rem;border-radius:10px;text-decoration:none;border:0;font-size:1rem;cursor:pointer}.btn:hover{background:#A9272E}
+    .hero{background:linear-gradient(160deg,var(--ch),var(--dk));color:#fff;padding:4.5rem 0}.hero .w{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:center}
+    .tag{display:inline-block;border:1px solid #fff;border-radius:99px;padding:.25rem .8rem;font-size:.85rem;font-weight:600}
+    h1{font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.12;margin:.8rem 0}h1 em{font-style:normal;color:#FFB3B6}
+    .sub{font-size:1.25rem;color:#E9EDEF;margin:0 0 1.2rem}
+    ul.ck{list-style:none;padding:0;margin:0 0 1.6rem}ul.ck li{display:flex;gap:.6rem;margin:.45rem 0}ul.ck svg{flex:none;margin-top:4px}
+    .hero ul.ck svg{color:#FFB3B6}
+    .ghost{color:#fff;margin-left:1rem;font-weight:700}
+    .card{background:#fff;color:var(--tx);border-radius:16px;padding:1.6rem;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+    .lab{background:#FDECEC;color:#9E1F27;font-weight:700;font-size:.8rem;padding:.2rem .6rem;border-radius:6px}
+    .card dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;margin:1rem 0 0}.card dt{color:var(--mu);font-size:.95rem}.card dd{margin:0;font-weight:650}
+    section{padding:4.5rem 0}.alt{background:var(--bg)}
+    h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.2;margin:0 0 1rem;color:var(--ch)}
+    .kick{color:#9E1F27;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;margin:0}
+    .g2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .box{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:1.6rem}.box h3{margin:.6rem 0 .4rem;color:var(--ch)}
+    .ico{display:inline-flex;background:var(--ch);color:#fff;border-radius:10px;padding:.55rem}
+    .box.risk{border-top:5px solid var(--redb)}.box.ok{border-top:5px solid var(--ch)}
+    .for{font-size:.95rem;color:var(--mu);font-weight:650;margin:.2rem 0 .6rem}
+    table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}caption{text-align:left;font-weight:700;padding:0 0 .6rem;color:var(--ch)}
+    th,td{text-align:left;padding:.9rem 1rem;border-bottom:1px solid var(--bd);vertical-align:top}thead th{background:var(--ch);color:#fff}td:last-child{font-weight:650}
+    form{display:grid;gap:1rem}label{font-weight:650;display:block;margin-bottom:.3rem}
+    input{width:100%;padding:.8rem;border:2px solid #4A555B;border-radius:8px;font-size:1rem;background:#fff;color:var(--tx)}
+    .req{color:#9E1F27;font-weight:500;font-size:.9rem}
+    .cta{background:var(--ch);color:#fff}.cta h2,.cta .kick{color:#fff}.cta .kick{color:#FFB3B6}
+    footer{background:var(--dk);color:#E3E7E9;padding:3rem 0 2rem}footer a{color:#fff}footer ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:1rem 1.2rem}
+    .decl{background:#2E373C;border-radius:12px;padding:1.4rem;margin:1.5rem 0}footer h2{color:#fff;font-size:1.25rem}
+    @media(max-width:860px){.hero .w,.g2{grid-template-columns:1fr}nav{margin-left:0;width:100%}header .btn{display:none}.hero{padding:3rem 0}section{padding:3rem 0}.ghost{display:inline-block;margin:1rem 0 0}table,thead,tbody,tr,th,td{display:block}thead{position:absolute;left:-999px}tr{border-bottom:1px solid var(--bd);padding:.4rem 0}td,tbody th{border:0;padding:.35rem 1rem}tbody th{padding-top:.8rem}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header>
+  <div class="w">
+    <a class="brand" href="./">
+      <picture>
+        <source srcset="logo-48.webp" type="image/webp">
+        <img src="logo-48.jpg" alt="" width="46" height="46">
+      </picture>
+      <span><span class="t">t</span>-access</span>
+    </a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#solucoes">Soluções</a></li>
+        <li><a href="#como">Como funciona</a></li>
+        <li><a href="#laudo">Laudo</a></li>
+        <li><a href="#quem">Quem somos</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#contato">Agendar diagnóstico</a>
+  </div>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="w">
+      <div>
+        <span class="tag">WCAG 2.2 · ABNT NBR 17225 · NBR 17060</span>
+        <h1 id="h-hero">Acessibilidade de verdade, <em>com prova técnica.</em></h1>
+        <p class="sub">Garantimos que seu site e app sejam acessíveis — e provamos isso com laudo.</p>
+        <ul class="ck">
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Testes automáticos a cada atualização do seu código (validador VIA)</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Testes reais feitos por pessoas com deficiência</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Laudo técnico assinado digitalmente e rastreável</span></li>
+        </ul>
+        <a class="btn" href="#contato">Agendar diagnóstico</a>
+        <a class="ghost" href="#laudo">Ver exemplo de laudo</a>
+      </div>
+      <div class="card">
+        <span class="lab">Exemplo ilustrativo</span>
+        <h2 style="font-size:1.3rem;margin:.8rem 0 0">Laudo técnico de acessibilidade</h2>
+        <dl>
+          <dt>Site avaliado</dt><dd>Amostra do seu domínio</dd>
+          <dt>Normas</dt><dd>WCAG 2.2 AA · NBR 17225</dd>
+          <dt>Método</dt><dd>VIA + testes com pessoas com deficiência</dd>
+          <dt>Assinatura</dt><dd>Digital ICP-Brasil + carimbo de tempo</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-risco">
+    <div class="w">
+      <p class="kick">O risco de não agir</p>
+      <h2 id="h-risco">Acessibilidade não é detalhe: é obrigação legal.</h2>
+      <div class="g2">
+        <div class="box risk">
+          <h3>Sem acessibilidade</h3>
+          <ul class="ck">
+            <li><span>A Lei Brasileira de Inclusão (Lei 13.146/2015, art. 63) exige sites acessíveis.</span></li>
+            <li><span>Empresas podem receber notificações e TACs do Ministério Público.</span></li>
+            <li><span>Contratos corporativos e públicos pedem cada vez mais comprovação técnica.</span></li>
+            <li><span>Widgets e “overlays” não corrigem o código e não substituem uma auditoria.</span></li>
+          </ul>
+        </div>
+        <div class="box ok">
+          <h3>Com a t-access + VIA</h3>
+          <ul class="ck">
+            <li><span>Problemas barrados antes de chegar ao ar (GitHub, GitLab, Jenkins).</span></li>
+            <li><span>Laudo técnico pronto para auditorias, jurídico e relatórios ESG.</span></li>
+            <li><span>Testes com NVDA, JAWS e VoiceOver feitos por especialistas com deficiência.</span></li>
+            <li><span>Menos risco e menos retrabalho — com evidência documentada.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="solucoes" aria-labelledby="h-sol">
+    <div class="w">
+      <p class="kick">Soluções</p>
+      <h2 id="h-sol">Uma solução para cada parte da sua empresa</h2>
+      <div class="g2">
+        <article class="box">
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span>
+          <h3>Validador VIA</h3>
+          <p class="for">Para times de tecnologia</p>
+          <p>Testa a acessibilidade a cada commit e pull request e impede que novos problemas cheguem à produção. Funciona via CLI, GitHub Actions e GitLab CI.</p>
+        </article>
+        <article class="box">
+          <span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+          <h3>Governança e consultoria</h3>
+          <p class="for">Para jurídico, compliance e ESG</p>
+          <p>Laudos técnicos, Declaração de Acessibilidade, políticas de compras de TI e workshops para lideranças.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="laudo" aria-labelledby="h-laudo">
+    <div class="w g2">
+      <div>
+        <p class="kick">O laudo</p>
+        <h2 id="h-laudo">Um laudo que você pode mostrar a qualquer auditoria</h2>
+        <ul class="ck">
+          <li><span>Documento técnico formal, assinado digitalmente (ICP-Brasil) e com registro de data e hora.</span></li>
+          <li><span>Combina análise automática do código com testes práticos de pessoas com deficiência.</span></li>
+          <li><span>Resumo executivo em linguagem simples para diretoria e conselho.</span></li>
+          <li><span>Estruturado para apoiar respostas a TACs e notificações administrativas.</span></li>
+        </ul>
+        <a class="btn" href="#contato">Pedir exemplo de laudo</a>
+      </div>
+      <div class="box">
+        <span class="lab">Exemplo ilustrativo</span>
+        <h3>Resumo executivo</h3>
+        <p>O site foi avaliado com o validador VIA e por especialistas com deficiência, usando leitores de tela e navegação por teclado. As barreiras encontradas ficam listadas por prioridade, com orientação de correção.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="como" aria-labelledby="h-como">
+    <div class="w">
+      <p class="kick">Como funciona</p>
+      <h2 id="h-como">Por que só o scanner automático não basta</h2>
+      <p>Ferramentas automáticas detectam apenas parte dos problemas de acessibilidade. Por isso unimos automação e testes humanos.</p>
+      <table>
+        <caption>Comparação entre ferramentas genéricas e t-access + VIA</caption>
+        <thead>
+          <tr><th scope="col">Critério</th><th scope="col">Ferramentas genéricas / overlays</th><th scope="col">t-access + VIA</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Cobertura</th><td>Só o que a máquina detecta</td><td>Automação + testes com pessoas com deficiência</td></tr>
+          <tr><th scope="row">Integração ao desenvolvimento</th><td>Normalmente após publicar</td><td>Bloqueio no pull request</td></tr>
+          <tr><th scope="row">Evidência</th><td>Painéis sem assinatura</td><td>Laudo técnico assinado</td></tr>
+          <tr><th scope="row">Privacidade</th><td>Scripts de terceiros no seu site</td><td>Nenhum script injetado; alinhado à LGPD</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="quem" aria-labelledby="h-quem">
+    <div class="w">
+      <p class="kick">Quem somos</p>
+      <h2 id="h-quem">Fundada por especialistas com mais de 20 anos em qualidade de software</h2>
+      <div class="g2">
+        <article class="box">
+          <h3>CEO e cofundadora</h3>
+          <p class="for">Qualidade de software, conformidade e governança</p>
+          <p>Conduz a relação com jurídico, compliance e a direção do trabalho de auditoria.</p>
+        </article>
+        <article class="box">
+          <h3>CTO e cofundadora</h3>
+          <p class="for">Criadora do validador VIA</p>
+          <p>Responde pela engenharia dos testes automáticos e pela integração com o desenvolvimento.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contato" aria-labelledby="h-cta">
+    <div class="w g2">
+      <div>
+        <h2 id="h-cta">Agende um diagnóstico de 30 minutos</h2>
+        <ul class="ck">
+          <li><span>Analisamos uma amostra do seu site ou app.</span></li>
+          <li><span>Mostramos os principais riscos e o que corrigir primeiro.</span></li>
+          <li><span>Sigilo garantido (NDA) e dados tratados conforme a LGPD.</span></li>
+        </ul>
+      </div>
+      <div class="box">
+        <form action="contato.php" method="post">
+          <input type="hidden" name="origem" value="taccess.com.br">
+          <div><label for="n">Nome <span class="req">(obrigatório)</span></label><input id="n" name="nome" autocomplete="name" required></div>
+          <div><label for="e">E-mail corporativo <span class="req">(obrigatório)</span></label><input id="e" name="email" type="email" autocomplete="email" required></div>
+          <div><label for="c">Empresa <span class="req">(obrigatório)</span></label><input id="c" name="empresa" autocomplete="organization" required></div>
+          <div><label for="f">Cargo</label><input id="f" name="cargo" autocomplete="organization-title"></div>
+          <div><label for="u">Site ou app para análise</label><input id="u" name="url" type="url" inputmode="url"></div>
+          <button class="btn" type="submit">Agendar diagnóstico</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="w">
+    <p class="brand" style="margin:0 0 .4rem"><span class="t">t</span>-access</p>
+    <p>Engenharia de acessibilidade digital.</p>
+    <div class="decl" id="declaracao">
+      <h2>Declaração de Acessibilidade</h2>
+      <p>A t-access se compromete a manter este site acessível a todas as pessoas, seguindo as WCAG 2.2 nível AA e a ABNT NBR 17225. O site é testado com ferramentas automáticas e com leitores de tela (NVDA, VoiceOver), navegação por teclado e ampliação de até 200%. Encontrou alguma barreira? Use o formulário de contato nesta página.</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <ul>
+        <li><a href="#solucoes">Soluções</a></li>
+        <li><a href="#laudo">Laudo</a></li>
+        <li><a href="#quem">Quem somos</a></li>
+        <li><a href="https://ranking.taccess.com.br/">Ranking</a></li>
+        <li><a href="#declaracao">Declaração de Acessibilidade</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <p>© 2026 t-access. VIA® é marca registrada.</p>
+  </div>
+</footer>
+</body>
 </html>

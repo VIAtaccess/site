@@ -2,9 +2,10 @@ FROM node:22-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm ci
-COPY index.html vite.config.ts tsconfig.json ./
+COPY index.html contato.php ./
+COPY ranking ./ranking
 COPY public ./public
-COPY src ./src
+COPY scripts ./scripts
 RUN npm run build
 
 FROM caddy:2-alpine

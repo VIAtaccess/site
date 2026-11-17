@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ranking t-access — acessibilidade de sites</title>
+  <meta name="description" content="O ranking t-access mostra, com método público, o quanto um site está preparado para todas as pessoas. Avaliação com o validador VIA e testes humanos.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root{--ch:#353F44;--dk:#232A2E;--red:#C8323A;--redb:#E8444B;--bg:#F5F6F7;--tx:#1E2427;--mu:#4A555B;--bd:#D5DADD}
+    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--tx);background:#fff;line-height:1.6;font-size:1.0625rem}
+    a{color:#9E1F27}:focus-visible{outline:3px solid #1A73E8;outline-offset:3px;border-radius:4px}
+    .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--ch);padding:.6rem 1rem;z-index:9}.skip:focus{left:1rem;top:1rem}
+    .w{max-width:1160px;margin:0 auto;padding:0 1.25rem}
+    header{background:var(--ch);color:#fff;position:sticky;top:0;z-index:5}header .w{display:flex;align-items:center;gap:1rem;min-height:72px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:800;font-size:1.25rem}
+    .brand img{height:46px;width:46px;border-radius:8px}.brand .t{color:var(--redb)}
+    nav ul{display:flex;gap:1.2rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;font-weight:600}nav{margin-left:auto}
+    .btn{display:inline-flex;align-items:center;background:var(--red);color:#fff;font-weight:700;padding:.85rem 1.4rem;border-radius:10px;text-decoration:none;border:0;font-size:1rem;cursor:pointer}.btn:hover{background:#A9272E}
+    .hero{background:linear-gradient(160deg,var(--ch),var(--dk));color:#fff;padding:4.5rem 0}
+    .tag{display:inline-block;border:1px solid #fff;border-radius:99px;padding:.25rem .8rem;font-size:.85rem;font-weight:600}
+    h1{font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.12;margin:.8rem 0 1rem;max-width:18ch}
+    h1 em{font-style:normal;color:#FFB3B6}
+    .sub{font-size:1.25rem;color:#E9EDEF;max-width:42rem}
+    section{padding:4.5rem 0}.alt{background:var(--bg)}
+    h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.2;margin:0 0 1rem;color:var(--ch)}
+    .kick{color:#9E1F27;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;margin:0}
+    .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}.g2{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem}
+    .box{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:1.6rem}h3{margin:.2rem 0 .4rem;color:var(--ch)}
+    .lab{background:#FDECEC;color:#9E1F27;font-weight:700;font-size:.8rem;padding:.2rem .6rem;border-radius:6px}
+    ol.steps{margin:0;padding-left:1.2rem}ol.steps li{margin:.6rem 0}
+    table{width:100%;border-collapse:collapse;background:#fff}caption{text-align:left;font-weight:700;padding:0 0 .6rem;color:var(--ch)}
+    th,td{text-align:left;padding:.9rem 1rem;border-bottom:1px solid var(--bd);vertical-align:top}thead th{background:var(--ch);color:#fff}
+    form{display:grid;gap:1rem}label{font-weight:650;display:block;margin-bottom:.3rem}
+    input{width:100%;padding:.8rem;border:2px solid #4A555B;border-radius:8px;font-size:1rem}
+    .req{color:#9E1F27;font-weight:500;font-size:.9rem}
+    .cta{background:var(--ch);color:#fff}.cta h2{color:#fff}
+    footer{background:var(--dk);color:#E3E7E9;padding:3rem 0 2rem}footer a{color:#fff}footer ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:1rem 1.2rem}
+    @media(max-width:860px){.g3,.g2{grid-template-columns:1fr}nav{margin-left:0;width:100%}header .btn{display:none}.hero,section{padding:3rem 0}table,thead,tbody,tr,th,td{display:block}thead{position:absolute;left:-999px}tr{border-bottom:1px solid var(--bd)}td,tbody th{border:0;padding:.35rem 1rem}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header>
+  <div class="w">
+    <a class="brand" href="./">
+      <picture>
+        <source srcset="logo-48.webp" type="image/webp">
+        <img src="logo-48.jpg" alt="" width="46" height="46">
+      </picture>
+      <span><span class="t">t</span>-access</span>
+    </a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#metodo">Método</a></li>
+        <li><a href="#leitura">Como ler</a></li>
+        <li><a href="#participar">Participar</a></li>
+        <li><a href="https://taccess.com.br/">Site t-access</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#participar">Pedir avaliação</a>
+  </div>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="w">
+      <span class="tag">ranking.taccess.com.br</span>
+      <h1>O ranking de acessibilidade <em>com método aberto.</em></h1>
+      <p class="sub">Mostramos o quanto um site está preparado para todas as pessoas. A nota só entra na lista depois de testes automáticos e de testes feitos por pessoas com deficiência.</p>
+      <a class="btn" href="#participar">Incluir meu site</a>
+    </div>
+  </section>
+
+  <section id="metodo" aria-labelledby="h-metodo">
+    <div class="w">
+      <p class="kick">Método</p>
+      <h2 id="h-metodo">O que a nota olha</h2>
+      <div class="g3">
+        <article class="box"><h3>Código</h3><p>O validador VIA percorre as páginas e aponta barreiras que a máquina consegue ver, como nome de botão ausente, contraste e rótulo de campo.</p></article>
+        <article class="box"><h3>Uso real</h3><p>Pessoas com deficiência percorrem as tarefas principais com leitor de tela e teclado. O que a máquina não vê também entra na nota.</p></article>
+        <article class="box"><h3>Normas</h3><p>A leitura usa WCAG 2.2 nível AA e ABNT NBR 17225. O resultado explica o que impede uma pessoa de concluir uma tarefa.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="leitura" aria-labelledby="h-leitura">
+    <div class="w">
+      <p class="kick">Como ler</p>
+      <h2 id="h-leitura">Três faixas, sem número mágico</h2>
+      <table>
+        <caption>Faixas do ranking t-access</caption>
+        <thead>
+          <tr><th scope="col">Faixa</th><th scope="col">O que significa</th><th scope="col">O que a empresa recebe</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Pronto para publicar</th><td>As tarefas principais funcionam com teclado e leitor de tela, e o código novo passa no VIA.</td><td>Ficha pública e laudo para auditoria.</td></tr>
+          <tr><th scope="row">Em correção</th><td>Há barreiras, mas elas estão listadas por prioridade e o time já consegue corrigir.</td><td>Plano do que corrigir primeiro.</td></tr>
+          <tr><th scope="row">Ainda não avaliado</th><td>O site não passou pelo método. Não recebe nota e não aparece como referência.</td><td>Convite para um diagnóstico de 30 minutos.</td></tr>
+        </tbody>
+      </table>
+      <div class="box" style="margin-top:1.5rem">
+        <span class="lab">Exemplo ilustrativo</span>
+        <h3>Ficha de um site</h3>
+        <p>Esta ficha mostra o formato. Não é um site real e não traz nota numérica.</p>
+        <ul>
+          <li>Endereço avaliado: informado pela empresa</li>
+          <li>Tarefas testadas: entrar, buscar, concluir o pedido</li>
+          <li>Faixa: definida só depois da avaliação</li>
+          <li>Evidência: laudo assinado, quando a empresa autoriza a publicação</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="participar" aria-labelledby="h-part">
+    <div class="w g2">
+      <div>
+        <p class="kick">Participar</p>
+        <h2 id="h-part">Peça a avaliação do seu site</h2>
+        <ol class="steps">
+          <li>Você envia o endereço do site ou do app.</li>
+          <li>A t-access avalia uma amostra e explica a faixa.</li>
+          <li>A ficha só vai ao ar se a empresa autorizar.</li>
+        </ol>
+        <p>Não publicamos lista de clientes, notas ou selos sem essa autorização. Dados do formulário seguem a LGPD.</p>
+      </div>
+      <form class="box" action="contato.php" method="post">
+        <input type="hidden" name="origem" value="ranking.taccess.com.br">
+        <div><label for="n">Nome <span class="req">(obrigatório)</span></label><input id="n" name="nome" autocomplete="name" required></div>
+        <div><label for="e">E-mail corporativo <span class="req">(obrigatório)</span></label><input id="e" name="email" type="email" autocomplete="email" required></div>
+        <div><label for="c">Empresa <span class="req">(obrigatório)</span></label><input id="c" name="empresa" autocomplete="organization" required></div>
+        <div><label for="u">Site para avaliar</label><input id="u" name="url" type="url" inputmode="url"></div>
+        <input type="hidden" name="cargo" value="">
+        <button class="btn" type="submit">Pedir avaliação</button>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="w">
+    <p><span class="t" style="color:#E8444B">t</span>-access — ranking de acessibilidade digital.</p>
+    <nav aria-label="Rodapé">
+      <ul>
+        <li><a href="#metodo">Método</a></li>
+        <li><a href="#leitura">Como ler</a></li>
+        <li><a href="#participar">Participar</a></li>
+        <li><a href="https://taccess.com.br/">Site t-access</a></li>
+      </ul>
+    </nav>
+    <p>© 2026 t-access. VIA® é marca registrada.</p>
+  </div>
+</footer>
+</body>
+</html>
